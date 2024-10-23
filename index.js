@@ -5,9 +5,9 @@ const app = express(),
   port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors("https://backend-express-36q4.onrender.com/"));
+app.use(cors());
 
-app.get("/api", (_request, response) => {
+app.get("/", (_request, response) => {
   response.send({ hello: "World" });
 });
 
